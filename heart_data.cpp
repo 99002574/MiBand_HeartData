@@ -44,7 +44,7 @@ int main(){
         sum=0;
         count=0;           
     }
-    cout<<"\n";
+    
     fin.close(); 
     
     return 0;       
