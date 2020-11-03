@@ -13,7 +13,7 @@ int main(){
     fin.open("heart_data_csv.csv", ios::in); 
     vector<string> row; 
     string line;
-    int hour; 
+    int avgData[24]; 
     int count=0;
     int sum=0;
     int sumAvg;
@@ -40,10 +40,15 @@ int main(){
         if(count!=0){
         sumAvg =sum/count;
         cout<<"Avg of heartbeat between "<<j<<":00 and "<<j+1<<":00 is:   "<<sumAvg<<endl;}
+        avgData[j]= sumAvg;
+        //cout<<sumAvg<<endl;
         sumAvg=0;
         sum=0;
-        count=0;           
+        count=0;  
+                
     }
+    for(j=0;j<24;j++){
+        cout<<avgData[j]<<endl;}
     
     fin.close(); 
     
